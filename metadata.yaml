@@ -21,9 +21,9 @@ metadata:
 spec:
   info:
     source:
-      repo: https://github.com/terraform-google-modules/terraform-google-address.git
+      repo: https://github.com/Umm-E-Kulsum/terraform-google-address.git
       sourceType: git
-    version: 5.0.0
+    version: 5.0.1
     actuationTool:
       flavor: Terraform
       version: ">= 0.13"
@@ -121,6 +121,11 @@ spec:
               version: ~> 6.0
             spec:
               outputExpr: subnets[0].self_link
+          - source:
+              source: github.com/terraform-google-modules/terraform-google-network//modules/vpc
+              version: ">= 9.0"
+            spec:
+              outputExpr: network_name
       - name: address_type
         description: The type of address to reserve, either "INTERNAL" or "EXTERNAL". If unspecified, defaults to "INTERNAL".
         varType: string
