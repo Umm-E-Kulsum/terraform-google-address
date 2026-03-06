@@ -23,7 +23,7 @@ spec:
     source:
       repo: https://github.com/Umm-E-Kulsum/terraform-google-address.git
       sourceType: git
-    version: 5.0.1
+    version: 5.0.2
     actuationTool:
       flavor: Terraform
       version: ">= 0.13"
@@ -122,8 +122,8 @@ spec:
             spec:
               outputExpr: subnets[0].self_link
           - source:
-              source: github.com/terraform-google-modules/terraform-google-network//modules/vpc
-              version: ">= 9.0"
+              source: github.com/terraform-google-modules/terraform-google-network
+              version: ">=13.0.1"
             spec:
               outputExpr: network_name
       - name: address_type
